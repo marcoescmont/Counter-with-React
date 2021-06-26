@@ -9,7 +9,20 @@ import "bootstrap";
 import "../styles/index.scss";
 
 //import your own components
-import { Home } from "./component/home.js";
+import { Cards } from "./component/Card.js";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+ReactDOM.render(
+	<div className="py-5 background">
+		<div className="m-auto card-deck w-75">
+			<Cards Title={<i className="far fa-clock"></i>} />
+			<Cards Title="0" />
+			<Cards Title="0" />
+			<Cards Title="0" />
+			<Cards Title="0" />
+			<Cards Title="0" />
+			<Cards Title="1" />
+		</div>
+	</div>,
+	document.querySelector("#app")
+);
